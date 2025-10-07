@@ -12,35 +12,37 @@ Why this minimal approach
 
 Quick next steps (PowerShell commands)
 
-1) Install Hugo Extended (if not installed)
+1) Install Hugo Extended ✅ COMPLETED
 ```powershell
-choco install hugo-extended -y
-# or download from https://github.com/gohugoio/hugo/releases
-hugo version
+# Hugo Extended v0.151.0 is now installed at C:\Hugo\bin\hugo.exe
+# Use full path or restart PowerShell to use 'hugo' command
+C:\Hugo\bin\hugo.exe version
 ```
 
-2) Initialize git, add theme as submodule, and run locally
+2) Initialize git, add theme as submodule, and run locally ✅ COMPLETED
 ```powershell
+# Git configured with user: githubmydtt
+# Theme submodule added successfully
+# Hugo dev server is running at http://localhost:1313
+
+# To restart the dev server later:
 cd "D:\00000 RMIT MASTER OF A.I\0. Projects\5. My-dinh.work\my-dinh-site"
-git init
-git add .
-git commit -m "chore: add Hugo skeleton"
-# add the theme submodule (this fetches only the theme files)
-git submodule add https://github.com/foxihd/hugo-brewm.git themes/hugo-brewm
-# fetch theme submodule content
-git submodule update --init --recursive
-# Run Hugo dev server (use -D to include drafts)
-hugo server -D
+C:\Hugo\bin\hugo.exe server -D --minify
 # Open http://localhost:1313
 ```
 
-3) Push to a remote (GitHub/GitLab) and connect to Cloudflare Pages
+3) Push to GitHub and connect to Cloudflare Pages ⏳ NEXT STEP
 ```powershell
-# create a repo on GitHub (use the website), then:
-git remote add origin https://github.com/<your-username>/<repo-name>.git
+# Step 3a: Create a GitHub repo
+# Go to https://github.com/new and create a repo named "my-dinh-work"
+# Make it public (required for free Cloudflare Pages)
+
+# Step 3b: Push to GitHub
+cd "D:\00000 RMIT MASTER OF A.I\0. Projects\5. My-dinh.work\my-dinh-site"
+git remote add origin https://github.com/githubmydtt/my-dinh-work.git
 git branch -M main
 git add .
-git commit -m "chore: initial site"
+git commit -m "chore: add hugo-brewm theme"
 git push -u origin main
 ```
 
