@@ -1,0 +1,8 @@
+baseURL = "https://my-dinh.work/"
+languageCode = "en-us"
+title = "My Dinh"
+theme = "hugo-brewm"
+enableRobotsTXT = true
+
+[params]
+  description = "Personal site for My Dinh"
