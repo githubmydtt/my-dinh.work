@@ -1,0 +1,12 @@
+{{ $css := resources.Get "css/custom.css" }}
+{{ if $css }}
+{{ $css := $css | resources.Minify }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+{{ end }}
+
+<!-- Ensure theme CSS loads -->
+{{ $themeCSS := resources.Get "css/hugo-brewm.min.css" }}
+{{ if not $themeCSS }}
+  <!-- Fallback to theme's CSS -->
+  <link rel="stylesheet" href="{{ "css/hugo-brewm.min.css" | relURL }}">
+{{ end }}

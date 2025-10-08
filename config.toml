@@ -70,3 +70,13 @@ relativeURLs = false
   
   [params.socialCard]
     enable = true
+  
+  # Force CSS loading
+  custom_css = ["css/custom.css"]
+  
+  # Theme asset configuration
+  [params.assets]
+    # Force minification
+    minify = true
+    # Ensure proper asset paths
+    fingerprint = false
