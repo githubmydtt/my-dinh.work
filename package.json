@@ -1,0 +1,28 @@
+{
+  "name": "my-dinh-work",
+  "version": "1.0.0",
+  "description": "Personal website for My Dinh",
+  "scripts": {
+    "dev": "hugo server -D --minify --bind=0.0.0.0 --baseURL=http://localhost",
+    "build": "hugo --minify",
+    "deploy": "hugo --minify && echo 'Site built successfully!'",
+    "new:post": "hugo new posts/$(date +%Y-%m-%d)-new-post.md",
+    "new:project": "hugo new projects/new-project.md",
+    "serve": "hugo server -D --disableFastRender",
+    "clean": "rm -rf public resources",
+    "update-theme": "git submodule update --remote --merge themes/hugo-brewm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/githubmydtt/my-dinh.work.git"
+  },
+  "author": "My Dinh",
+  "license": "MIT",
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0",
+    "postcss-cli": "^10.0.0",
+    "tailwindcss": "^3.0.0"
+  }
+}
