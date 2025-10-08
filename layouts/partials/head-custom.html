@@ -1,0 +1,14 @@
+<!-- Ensure CSS loads on Cloudflare Pages -->
+<style>
+/* Critical CSS - loads immediately */
+body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+.site-header { background: #fff; border-bottom: 1px solid #e5e7eb; }
+.main-nav a { color: #374151; text-decoration: none; padding: 0.5rem 1rem; }
+.main-nav a:hover { color: #1f2937; background: #f9fafb; }
+</style>
+
+<!-- Load theme CSS with cache busting -->
+<link rel="stylesheet" href="{{ "css/hugo-brewm.min.css" | relURL }}?v={{ now.Unix }}">
+
+<!-- Load custom CSS -->
+<link rel="stylesheet" href="{{ "css/custom.css" | relURL }}?v={{ now.Unix }}">
