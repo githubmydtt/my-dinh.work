@@ -6,7 +6,6 @@ theme = "hugo-brewm"
 enableRobotsTXT = true
 canonifyURLs = true
 enableGitInfo = true
-relativeURLs = false
 
 [markup]
   [markup.goldmark]
@@ -24,13 +23,6 @@ relativeURLs = false
   tag = "tags"
   author = "author"
   series = "series"
-
-[build]
-  publish = "public"
-  command = "hugo --minify"
-
-[build.environment]
-  HUGO_VERSION = "0.151.0"
 
 [params]
   title = "My Dinh"

@@ -1,12 +1,24 @@
-{{ $css := resources.Get "css/custom.css" }}
-{{ if $css }}
-{{ $css := $css | resources.Minify }}
-<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+<!-- Force load theme CSS first -->
+<link rel="stylesheet" href="{{ "css/hugo-brewm.min.css" | relURL }}">
+
+<!-- Load custom CSS if available -->
+{{ $customCSS := resources.Get "css/custom.css" }}
+{{ if $customCSS }}
+{{ $customCSS := $customCSS | resources.Minify | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $customCSS.RelPermalink }}">
 {{ end }}
 
-<!-- Ensure theme CSS loads -->
-{{ $themeCSS := resources.Get "css/hugo-brewm.min.css" }}
-{{ if not $themeCSS }}
-  <!-- Fallback to theme's CSS -->
-  <link rel="stylesheet" href="{{ "css/hugo-brewm.min.css" | relURL }}">
-{{ end }}
+<!-- Ensure all theme assets load -->
+<script>
+  // Force reload stylesheets if they fail to load
+  document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('link[rel="stylesheet"]');
+    links.forEach(link => {
+      if (!link.sheet) {
+        const newLink = link.cloneNode();
+        newLink.href = link.href + '?v=' + Date.now();
+        link.parentNode.replaceChild(newLink, link);
+      }
+    });
+  });
+</script>
