@@ -1,0 +1,100 @@
+[[main]]
+  name = "About My"
+  identifier = "about"
+  pageRef = "/about"
+  weight = 1
+
+  [[main]]
+    name = "Bio"
+    identifier = "about.bio"
+    pageRef = "/about/bio"
+    parent = "about"
+    weight = 1
+
+  [[main]]
+    name = "Experience"
+    identifier = "about.experience"
+    pageRef = "/about/experience"
+    parent = "about"
+    weight = 2
+
+  [[main]]
+    name = "Skills"
+    identifier = "about.skills"
+    pageRef = "/about/skills"
+    parent = "about"
+    weight = 3
+
+[[main]]
+  name = "Projects"
+  identifier = "projects"
+  pageRef = "/projects"
+  weight = 2
+
+  [[main]]
+    name = "AI"
+    identifier = "projects.ai"
+    pageRef = "/projects/ai"
+    parent = "projects"
+    Post = "Machine Learning & AI Projects"
+    weight = 1
+
+  [[main]]
+    name = "Creative"
+    identifier = "projects.creative"
+    pageRef = "/projects/creative"
+    parent = "projects"
+    Post = "Design & Creative Work"
+    weight = 2
+
+  [[main]]
+    name = "Business"
+    identifier = "projects.business"
+    pageRef = "/projects/business"
+    parent = "projects"
+    Post = "Business Solutions & Consulting"
+    weight = 3
+
+[[main]]
+  name = "Now"
+  identifier = "now"
+  pageRef = "/now"
+  weight = 3
+
+[[main]]
+  name = "Awards"
+  identifier = "awards"
+  pageRef = "/awards"
+  weight = 4
+
+[[main]]
+  name = "Contact"
+  identifier = "contact"
+  pageRef = "/contact"
+  weight = 5
+
+# Footer menu
+[[footer]]
+  identifier = "linkedin"
+  pageRef = "https://linkedin.com/in/your-profile"
+  weight = 1
+  name = "LinkedIn"
+  pre = "linkedin"
+  [[footer.params]]
+    target = "_blank"
+
+[[footer]]
+  identifier = "github"
+  pageRef = "https://github.com/githubmydtt"
+  weight = 2
+  name = "GitHub"
+  pre = "github"
+  [[footer.params]]
+    target = "_blank"
+
+[[footer]]
+  identifier = "email"
+  pageRef = "mailto:contact@my-dinh.work"
+  weight = 3
+  name = "Email"
+  pre = "email"

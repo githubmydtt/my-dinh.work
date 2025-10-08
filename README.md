@@ -33,13 +33,12 @@ C:\Hugo\bin\hugo.exe server -D --minify
 
 3) Push to GitHub and connect to Cloudflare Pages ⏳ NEXT STEP
 ```powershell
-# Step 3a: Create a GitHub repo
-# Go to https://github.com/new and create a repo named "my-dinh-work"
-# Make it public (required for free Cloudflare Pages)
+# Step 3a: Create a GitHub repo ✅ COMPLETED
+# Repo created at: https://github.com/githubmydtt/my-dinh.work
 
 # Step 3b: Push to GitHub
 cd "D:\00000 RMIT MASTER OF A.I\0. Projects\5. My-dinh.work\my-dinh-site"
-git remote add origin https://github.com/githubmydtt/my-dinh-work.git
+git remote add origin https://github.com/githubmydtt/my-dinh.work.git
 git branch -M main
 git add .
 git commit -m "chore: add hugo-brewm theme"

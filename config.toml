@@ -1,8 +1,60 @@
 baseURL = "https://my-dinh.work/"
 languageCode = "en-us"
+defaultContentLanguage = "en"
 title = "My Dinh"
 theme = "hugo-brewm"
 enableRobotsTXT = true
+canonifyURLs = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    codeFences = true
+    noClasses = false
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  author = "author"
+  series = "series"
 
 [params]
-  description = "Personal site for My Dinh"
+  title = "My Dinh"
+  description = "Personal portfolio of My Dinh - AI, Creative, and Business Projects"
+  copyright = "Copyright 2025 © My Dinh"
+  extMeta = true
+  coffeeStat = true
+  
+  [params.author]
+    name = "My Dinh"
+    email = "contact@my-dinh.work"
+  
+  [params.feed]
+    flowlines = true
+    flowlinesLimit = 21
+  
+  [params.home]
+    disableSlide = false
+    disableListing = false
+    featuredListing = ['categories', 'series']
+  
+  [params.posts]
+    justifying = false
+    colophon = true
+    related = true
+    share = true
+  
+  [params.search]
+    enable = true
+    pagefind = true
+  
+  [params.typeface]
+    webSafe = false
+    roman = "crimson"
+    sans = "inter"
+    localHost = false
+  
+  [params.socialCard]
+    enable = true
